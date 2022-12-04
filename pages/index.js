@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className=" ">
+    <div className=" bg">
       <Link prefetch={true} href={{
         pathname: "/[username]",
         query: {username: "daniel"}
@@ -16,3 +16,5 @@ export default function Home() {
     </div>
   )
 }
+
+
