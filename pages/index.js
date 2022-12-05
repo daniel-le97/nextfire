@@ -8,15 +8,6 @@ import Loader from "../components/Loader";
 export default function Home() {
   return (
     <div className=''>
-      {/* <Link
-        prefetch={true}
-        href={{
-          pathname: "/[username]",
-          query: { username: "daniel" },
-        }}>
-        dan
-      </Link> */}
-
       <div>
         <Loader show />
       </div>

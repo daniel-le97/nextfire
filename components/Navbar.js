@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { UserContext } from "../library/context";
+import { useContext } from "react";
 
 export default function Navbar() {
-  const { user, username } = {};
+  const {user, username} = useContext(UserContext)
 
   return (
     <nav className='navbar'>
