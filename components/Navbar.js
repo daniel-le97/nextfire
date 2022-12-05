@@ -4,26 +4,26 @@ import { UserContext } from "../library/context";
 import { useContext } from "react";
 
 export default function Navbar() {
-  const {user, username} = useContext(UserContext)
+  const { user, username } = useContext(UserContext);
 
   return (
     <nav className='navbar'>
       <ul>
         <li>
           <Link href='/'>
-            <button className="btn-logo">feed</button>
+            <button className='btn-logo'>feed</button>
           </Link>
         </li>
         {username && (
           <>
-            <li className="push-left">
+            <li className='push-left'>
               <Link href='/admin'>
-                <button className="btn-blue">write posts</button>
+                <button className='btn-blue'>write posts</button>
               </Link>
             </li>
             <li>
               <Link href={`/${username}`}>
-                <Image src={user?.photoUrl} alt='' />
+                <img src={user?.photoURL} alt='' />
               </Link>
             </li>
           </>
@@ -31,7 +31,7 @@ export default function Navbar() {
         {!username && (
           <li>
             <Link href='/enter'>
-              <button className="btn-blue">login</button>
+              <button className='btn-blue'>login</button>
             </Link>
           </li>
         )}
