@@ -3,18 +3,23 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import react from "react";
 import Link from "next/link";
+import Loader from "../components/Loader";
 
 export default function Home() {
   return (
-    <div className=" bg">
-      <Link prefetch={true} href={{
-        pathname: "/[username]",
-        query: {username: "daniel"}
-      }}>
+    <div className=''>
+      {/* <Link
+        prefetch={true}
+        href={{
+          pathname: "/[username]",
+          query: { username: "daniel" },
+        }}>
         dan
-      </Link>
+      </Link> */}
+
+      <div>
+        <Loader show />
+      </div>
     </div>
-  )
+  );
 }
-
-
