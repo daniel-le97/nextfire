@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import debounce from "lodash.debounce";
 import { useCallback, useContext, useEffect, useState } from "react";
 import { UserContext } from "../library/context";
@@ -62,7 +63,7 @@ function UsernameForm() {
     }
   };
 
-   async function onSubmit(e){
+  async function onSubmit(e) {
     e.preventDefault();
     const userDoc = firestore.doc(`users/${user.uid}`);
     const usernameDoc = firestore.doc(`usernames/${formValue}`);
@@ -79,7 +80,7 @@ function UsernameForm() {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   const checkUsername = useCallback(
     debounce(async (username) => {

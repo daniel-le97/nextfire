@@ -7,6 +7,8 @@ export async function getServerSideProps({ query }) {
   const userDoc = await getUserWithUsername(username);
   let user = null;
   let posts = null;
+  if (!userDoc) {return {notFound: true,};}
+
   if (userDoc) {
     user = userDoc.data();
     const postsQuery = userDoc.ref
